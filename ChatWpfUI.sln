@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.4.33213.308
+VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatWpfUI", "ChatWpfUI.csproj", "{C1DDA208-3615-4B1D-A2FD-A58E9F52E327}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatWpfUI", "ChatGpt\ChatWpfUI.csproj", "{3FD0C270-2EF6-48B6-8C14-51FD423D17FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C1DDA208-3615-4B1D-A2FD-A58E9F52E327}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C1DDA208-3615-4B1D-A2FD-A58E9F52E327}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C1DDA208-3615-4B1D-A2FD-A58E9F52E327}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C1DDA208-3615-4B1D-A2FD-A58E9F52E327}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FD0C270-2EF6-48B6-8C14-51FD423D17FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FD0C270-2EF6-48B6-8C14-51FD423D17FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FD0C270-2EF6-48B6-8C14-51FD423D17FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FD0C270-2EF6-48B6-8C14-51FD423D17FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {3E2B6E31-4CB9-4BEE-A6EB-795930612714}
+		SolutionGuid = {BE591786-9DA2-43FF-BACC-0409EE10B353}
 	EndGlobalSection
 EndGlobal
