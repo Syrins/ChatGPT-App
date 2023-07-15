@@ -57,7 +57,7 @@ public class ChatStreamService : IChatStreamService
             s_client.DefaultRequestHeaders.Remove("Authorization");
         }
         s_client.DefaultRequestHeaders.Add("Authorization", $"Bearer {apiKey}");
-        s_client.Timeout = TimeSpan.FromMilliseconds(-1); // ÉèÖÃ³¬Ê±Ê±¼äÎªÎÞÏÞ
+        s_client.Timeout = TimeSpan.FromMilliseconds(-1); // è®¾ç½®è¶…æ—¶æ—¶é—´ä¸ºæ— é™
         s_client.DefaultRequestHeaders
               .Accept
               .Add(new MediaTypeWithQualityHeaderValue("text/event-stream"));
@@ -65,10 +65,10 @@ public class ChatStreamService : IChatStreamService
         request.Headers.Add("Connection", "keep-alive");
         request.Content = new StringContent(requestBodyJson, Encoding.UTF8, "application/json");
         using var response = await s_client.SendAsync(request, HttpCompletionOption.ResponseHeadersRead);
-        response.EnsureSuccessStatusCode(); // È·±£ÏìÓ¦³É¹¦
-        var sseStream = await response.Content.ReadAsStreamAsync(); // »ñÈ¡ SSE Êý¾ÝÁ÷
+        response.EnsureSuccessStatusCode(); // ç¡®ä¿å“åº”æˆåŠŸ
+        var sseStream = await response.Content.ReadAsStreamAsync(); // èŽ·å– SSE æ•°æ®æµ
 
-        // ´¦Àí SSE ÏìÓ¦
+        // å¤„ç† SSE å“åº”
         using (var stream = await response.Content.ReadAsStreamAsync())
         using (var reader = new StreamReader(stream))
         {
@@ -77,9 +77,9 @@ public class ChatStreamService : IChatStreamService
                 string line = await reader.ReadLineAsync();
 
                 if (line == null) continue;
-                if (line.StartsWith(":")) continue; //×¢ÊÍÐÐ
+                if (line.StartsWith(":")) continue; //æ³¨é‡Šè¡Œ
 
-                // Ã¿¸öÊÂ¼þ·ÖÎª¶àÐÐ£¬²¢ÒÔ¿ÕÐÐ·Ö¸ô
+                // æ¯ä¸ªäº‹ä»¶åˆ†ä¸ºå¤šè¡Œï¼Œå¹¶ä»¥ç©ºè¡Œåˆ†éš”
                 string[] data = line.Split(new[] { ':' }, 2);
 
                 if (data.Length == 2)
@@ -105,7 +105,7 @@ public class ChatStreamService : IChatStreamService
             }
         }
         response.Dispose();
-        //// ¶ÁÈ¡ SSE Êý¾ÝÁ÷£¬²¢¸ù¾ÝÌØ¶¨¹æÔò½âÎöÊý¾Ý
+        //// è¯»å– SSE æ•°æ®æµï¼Œå¹¶æ ¹æ®ç‰¹å®šè§„åˆ™è§£æžæ•°æ®
         //var buffer = new byte[4096];
         //while (await sseStream.ReadAsync(buffer, 0, buffer.Length) > 0)
         //{
@@ -130,7 +130,7 @@ public class ChatStreamService : IChatStreamService
         //    return null;
         //}
 
-        var apiKey = "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";
+        var apiKey = "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";
         var proxy = settings.Proxy;
 
         // Get the request body JSON
