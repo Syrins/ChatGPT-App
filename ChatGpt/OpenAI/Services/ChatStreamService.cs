@@ -130,8 +130,8 @@ public class ChatStreamService : IChatStreamService
         //    return null;
         //}
 
-        var apiKey = "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";
-        var proxy = settings.Proxy;
+        var apiKey = "Api Key"; //Api Key OpenAI 
+         var proxy = settings.Proxy;
 
         // Get the request body JSON
         var requestBodyJson = GetRequestBodyJson(settings);
