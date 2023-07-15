@@ -1,2 +1,4 @@
 # ChatGPT-App
-C# WPF Chat
+
+Folder - OpenAI/Services/ChatStreamService
+**Api Key Changed**
