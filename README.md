@@ -1,3 +1,6 @@
+    📦
+    crate-template
+
 # ChatGPT-App
 
 Folder - OpenAI/Services/ChatStreamService
